@@ -1,19 +1,16 @@
 ﻿namespace tabuleiro
 {
-    class Posicao
+    class Tabuleiro
     {
         public int linhas { get; set; }
         public int colunas { get; set; }
+        private Peca[,] pecas;
 
-        public Posicao (int linhas, int colunas)
+        public Tabuleiro(int linhas, int colunas)
         {
             this.linhas = linhas;
             this.colunas = colunas;
+            pecas = new Peca[linhas, colunas];
         }
-        public override string ToString()
-        {
-            return linhas + "," + colunas;
-        }
-
     }
 }
